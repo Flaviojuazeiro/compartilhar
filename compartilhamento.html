@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+#contener1{
+    display: flex;
+    width: fit-content;
+    background-color: #dcdcdc85;
+    border-radius: 3px;
+    justify-content: center;
+  
+}
+
+#link{
+    display: flex;   
+    padding: 6px;
+
+}
+
+#link:hover{
+    opacity: 50%;
+}
+
+
+
+</style>
+
+<script>
+
+function sharePage() {
+  navigator.share({
+    title: document.title,
+    text: 'Confira esta página interessante:',
+    url: window.location.href
+  })
+    .then(() => console.log('Página compartilhada com sucesso!'))
+    .catch((error) => console.error('Erro ao compartilhar página:', error));
+}
+
+</script>
+<body>
+
+    <section id="contener1">
+
+        <a id="link" href="https://www.facebook.com/sharer/sharer.php?u=https://meusite.com.br" target="_blank">
+            <img width="35" height="35" src="img/facebook.png" alt="Compartilhar">
+
+            <a id="link" href="https://twitter.com/intent/tweet?url=https://meusite.com.br" target="_blank">
+                <img width="35" height="35" src="img/twitter.png" alt="Compartilhar">
+
+                <a id="link" href="https://api.whatsapp.com/send?text=https://meusite.com.br" target="_blank" >
+                    <img width="35" height="35" src="img/whatsapp.png" alt="Compartilhar">
+
+                    <a id="link" href="https://t.me/share/url?url=https://meusite.com.br&text=" target="_blank" >
+                        <img width="35" height="35" src="img/telegrama.png" alt="Compartilhar">
+
+                        <a id="link" href="https://www.linkedin.com/sharing/share-offsite/?url=https://meusite.com.br" target="_blank" >
+                            <img width="35" height="35" src="img/linkedin.png" alt="Compartilhar">
+
+                            <a id="link" href="#" onclick="sharePage()">
+                                <img width="35" height="35" src="img/partilhar.svg" alt="Compartilhar">
+
+            
+
+                         
+                              
+
+
+    
+    
+    
+    
+    </section>
+
+   
+</a>
+    
+</body>
+</html>
